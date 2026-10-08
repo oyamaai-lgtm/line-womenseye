@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ライフキャリア相談｜デジカレ修了生コミュニティ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="sample-bar">これはサンプル画面です。AIの返答はあらかじめ用意した例で、本物のAIではありません。</div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="back" href="index.html">‹ メニュー</a>
+      <p class="site-title">ライフキャリア相談</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="page-head">
+      <div class="icon">🌷</div>
+      <h1>だれかに話したいときに、<br>いつでも相談できます</h1>
+      <p>仕事のことも、家族のことも。対面が不安なときは、まずAIに話してみてください。</p>
+    </div>
+
+    <section>
+      <div class="chat">
+        <div class="chat-head">
+          <div class="avatar">🌷</div>
+          <div>
+            <b>ライフキャリア相談AI</b>
+            <small>匿名で相談できます・音声でも話せます</small>
+          </div>
+        </div>
+        <div class="chat-log" id="log" aria-live="polite"></div>
+        <form class="chat-input" id="form">
+          <button class="icon-btn" type="button" id="mic" aria-label="音声で話す">🎤</button>
+          <input id="input" type="text" placeholder="ここに入力するか、🎤で話してください" autocomplete="off">
+          <button class="icon-btn send" type="submit" aria-label="送信">➤</button>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <h2>安心して相談できるしくみ</h2>
+      <div class="card stack">
+        <div><span class="tag">匿名</span><p style="margin-top:4px">ほかの修了生には、あなたが相談したことはわかりません。</p></div>
+        <div><span class="tag">見られる人を限定</span><p style="margin-top:4px">相談内容を見られるのは、ライフキャリア相談チームだけです。必要なときに運営がサポートできるよう、運営側は相談者を確認できます。</p></div>
+        <div><span class="tag">専門の窓口へ</span><p style="margin-top:4px">内容に応じて、キャリアコンサルタントへの相談や専門の機関をご案内します。</p></div>
+      </div>
+      <div class="notice" style="margin-top:12px">
+        <b>緊急のとき</b>　命や安全にかかわるときは、すぐに110番・119番に連絡してください。
+      </div>
+    </section>
+
+    <section>
+      <h2>人に相談したいときは</h2>
+      <div class="card">
+        <p>キャリアコンサルタントの資格を持つ相談員と、オンラインまたは対面で話せます。</p>
+        <div class="btn-row">
+          <button class="btn" type="button" onclick="alert('サンプルのため、予約はできません')">相談を予約する</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><a href="index.html">メニューにもどる</a></div>
+  </footer>
+
+  <script src="assets/consult.js"></script>
+</body>
+</html>

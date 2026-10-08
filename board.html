@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>雑談掲示板｜デジカレ修了生コミュニティ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="sample-bar">これはサンプル画面です。投稿者・投稿内容はすべて架空のものです。</div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="back" href="index.html">‹ メニュー</a>
+      <p class="site-title">雑談掲示板</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="page-head">
+      <div class="icon">💬</div>
+      <h1>ちょっと話したいときの雑談掲示板</h1>
+      <p>読むだけでもOK。リアクションだけでもうれしいです。</p>
+    </div>
+
+    <section>
+      <details class="card">
+        <summary><b>掲示板のルール</b>（タップで開く）</summary>
+        <ul style="margin:8px 0 0;padding-left:1.2em">
+          <li>基本は実名で投稿します</li>
+          <li>この場で個人どうしの連絡先交換や勧誘はしません</li>
+          <li>相手を否定しない、ゆるく温かいことばで</li>
+          <li>返信は強制しません。既読スルーもスタンプだけもOK</li>
+        </ul>
+      </details>
+    </section>
+
+    <section>
+      <div class="tabs" role="tablist" aria-label="カテゴリ">
+        <button type="button" role="tab" aria-selected="true" data-cat="all">すべて</button>
+        <button type="button" role="tab" aria-selected="false" data-cat="mama">👶 ママのつながり</button>
+        <button type="button" role="tab" aria-selected="false" data-cat="shikaku">📝 資格取得</button>
+        <button type="button" role="tab" aria-selected="false" data-cat="job">💼 就職・転職</button>
+      </div>
+
+      <div id="posts">
+        <article class="card post" data-cat="shikaku">
+          <div class="avatar bot">🤖</div>
+          <div class="post-body">
+            <div class="post-meta"><b>コミュニティbot</b>今日 9:00 ・ 資格取得</div>
+            <p>今週のおだい：最近、学んでいることはありますか？ ひとことでも、スタンプだけでもどうぞ 🌱</p>
+            <div class="reactions"><button type="button">👍 4</button><button type="button">🌱 6</button></div>
+          </div>
+        </article>
+        <article class="card post" data-cat="mama">
+          <div class="avatar">さ</div>
+          <div class="post-body">
+            <div class="post-meta"><b>佐藤 花子（架空）</b>昨日 21:30 ・ ママのつながり</div>
+            <p>子どもが寝たあと15分だけUdemyを見るのが最近の習慣です。同じような方いますか？</p>
+            <div class="reactions"><button type="button">👍 8</button><button type="button">🙌 3</button></div>
+          </div>
+        </article>
+        <article class="card post" data-cat="job">
+          <div class="avatar" style="background:var(--green)">た</div>
+          <div class="post-body">
+            <div class="post-meta"><b>高橋 恵（架空）</b>10/2 ・ 就職・転職</div>
+            <p>事務職の面接で、デジカレで作ったチラシを見せたら話が盛り上がりました！</p>
+            <div class="reactions"><button type="button">🎉 12</button><button type="button">👏 5</button></div>
+          </div>
+        </article>
+        <article class="card post" data-cat="shikaku">
+          <div class="avatar" style="background:var(--blue)">す</div>
+          <div class="post-body">
+            <div class="post-meta"><b>鈴木 由美（架空）</b>9/29 ・ 資格取得</div>
+            <p>ITパスポート、来月受けます。もくもく会で一緒に勉強できる方いたらうれしいです。</p>
+            <div class="reactions"><button type="button">💪 7</button><button type="button">📝 2</button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <label for="newpost"><b>投稿する</b></label>
+        <textarea id="newpost" rows="3" placeholder="ひとことどうぞ（サンプルのため送信されません）" style="width:100%;margin-top:8px;font:inherit;padding:10px;border-radius:12px;border:1px solid var(--border);background:var(--bg);color:var(--text)"></textarea>
+        <div class="btn-row">
+          <button class="btn" type="button" onclick="alert('サンプルのため、投稿はできません')">投稿する</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><a href="index.html">メニューにもどる</a></div>
+  </footer>
+
+  <script>
+    // カテゴリの切り替え
+    const tabs = document.querySelectorAll('.tabs button');
+    const posts = document.querySelectorAll('#posts .post');
+    tabs.forEach(tab => tab.addEventListener('click', () => {
+      tabs.forEach(t => t.setAttribute('aria-selected', t === tab));
+      posts.forEach(p => {
+        p.style.display = tab.dataset.cat === 'all' || p.dataset.cat === tab.dataset.cat ? '' : 'none';
+      });
+    }));
+
+    // リアクションのオン・オフ
+    document.querySelectorAll('.reactions button').forEach(btn => btn.addEventListener('click', () => {
+      const [emoji, count] = btn.textContent.split(' ');
+      const on = btn.classList.toggle('on');
+      btn.textContent = `${emoji} ${Number(count) + (on ? 1 : -1)}`;
+    }));
+  </script>
+</body>
+</html>

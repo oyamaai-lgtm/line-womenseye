@@ -3,161 +3,94 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>line-womenseye</title>
-  <meta name="description" content="デジタルカレッジUP修了生がゆるくつながれるコミュニティです。">
+  <title>デジカレ修了生コミュニティ</title>
+  <meta name="description" content="デジタルカレッジUP修了生がゆるくつながり、学び続けられるコミュニティ（サンプル）">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #fffaf6;
-      --surface: #ffffff;
-      --text: #3a3335;
-      --muted: #7a6f72;
-      --accent: #e8707e;
-      --accent-soft: #fde8ea;
-      --line: #06c755;
-      --border: #f0e2e0;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #1f1b1c;
-        --surface: #2a2526;
-        --text: #f3ecec;
-        --muted: #b8acae;
-        --accent: #f28c98;
-        --accent-soft: #3a2a2d;
-        --border: #3d3537;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
-      line-height: 1.8;
-    }
-    a { color: inherit; }
-    .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
-
-    header { padding: 16px 0; }
-    header .wrap { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-weight: 700; letter-spacing: .02em; }
-    nav a { margin-left: 16px; text-decoration: none; color: var(--muted); font-size: .95rem; }
-    nav a:hover { color: var(--accent); }
-
-    .hero { padding: 72px 0 64px; text-align: center; }
-    .hero .badge {
-      display: inline-block; padding: 4px 14px; border-radius: 999px;
-      background: var(--accent-soft); color: var(--accent); font-size: .85rem; font-weight: 700;
-    }
-    .hero h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); line-height: 1.4; margin: 20px 0 16px; }
-    .hero h1 span { color: var(--accent); }
-    .hero p { color: var(--muted); margin: 0 auto 32px; max-width: 34em; }
-
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 14px 28px; border-radius: 999px; text-decoration: none;
-      font-weight: 700; background: var(--line); color: #fff;
-      box-shadow: 0 4px 14px rgba(6, 199, 85, .25); transition: transform .15s;
-    }
-    .btn:hover { transform: translateY(-2px); }
-
-    section { padding: 56px 0; }
-    h2 { font-size: 1.5rem; text-align: center; margin: 0 0 32px; }
-    h2::after {
-      content: ""; display: block; width: 40px; height: 3px; border-radius: 3px;
-      background: var(--accent); margin: 10px auto 0;
-    }
-
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-    .card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 16px; padding: 24px;
-    }
-    .card .icon { font-size: 1.8rem; }
-    .card h3 { margin: 8px 0 4px; font-size: 1.1rem; }
-    .card p { margin: 0; color: var(--muted); font-size: .95rem; }
-
-    .steps { list-style: none; padding: 0; margin: 0 auto; max-width: 560px; counter-reset: step; }
-    .steps li {
-      counter-increment: step; position: relative;
-      padding: 16px 16px 16px 64px; margin-bottom: 12px;
-      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-    }
-    .steps li::before {
-      content: counter(step); position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
-      width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
-      background: var(--accent); color: #fff; font-weight: 700;
-    }
-    .cta { text-align: center; margin-top: 32px; }
-
-    footer { padding: 32px 0; text-align: center; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--border); }
-  </style>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header>
+  <div class="sample-bar">これはサンプル画面です。掲載内容はすべて仮のものです。</div>
+
+  <header class="site-header">
     <div class="wrap">
-      <div class="logo">line-womenseye</div>
-      <nav>
-        <a href="#about">コミュニティについて</a>
-        <a href="#join">参加方法</a>
-      </nav>
+      <p class="site-title">デジカレ修了生コミュニティ</p>
     </div>
   </header>
 
-  <main>
+  <main class="wrap">
     <div class="hero">
-      <div class="wrap">
-        <span class="badge">デジタルカレッジUP 修了生のみなさまへ</span>
-        <h1>学びのあとも、<br><span>ゆるく</span>つながろう。</h1>
-        <p>デジタルカレッジUP修了生がゆるくつながれるコミュニティです。情報交換や近況報告など、気軽に参加してください。</p>
-        <a class="btn" href="#join">LINEで参加する</a>
-      </div>
+      <span class="badge">デジタルカレッジUP 修了生のみなさまへ</span>
+      <h1>つながり続けることで、<br><span>学び続けられる。</span></h1>
+      <p>講座が終わっても、仲間と、学びと、これからのキャリアとつながれる場所です。見るだけでも大丈夫。自分のペースでどうぞ。</p>
     </div>
 
-    <section id="about">
-      <div class="wrap">
-        <h2>コミュニティについて</h2>
-        <div class="cards">
-          <div class="card">
-            <div class="icon">💬</div>
-            <h3>気軽な情報交換</h3>
-            <p>仕事やツールのこと、ちょっとした疑問も気軽に話せます。</p>
-          </div>
-          <div class="card">
-            <div class="icon">🌱</div>
-            <h3>学びを続ける</h3>
-            <p>修了後も、お互いに刺激をもらいながら成長を続けられます。</p>
-          </div>
-          <div class="card">
-            <div class="icon">☕</div>
-            <h3>ゆるいつながり</h3>
-            <p>参加も発言も自由。自分のペースで関わってください。</p>
-          </div>
-        </div>
-      </div>
+    <section>
+      <h2>メニュー</h2>
+      <nav class="menu-grid" aria-label="メニュー">
+        <a class="tile featured" href="consult.html">
+          <span class="icon">🌷</span>
+          <strong>ライフキャリア相談</strong>
+          <span>AIに匿名で気軽に相談</span>
+        </a>
+        <a class="tile" href="learn.html">
+          <span class="icon">📚</span>
+          <strong>学び続ける</strong>
+          <span>講座・Udemy・PC貸出</span>
+        </a>
+        <a class="tile" href="points.html">
+          <span class="icon">🎓</span>
+          <strong>資格サポート・ポイント</strong>
+          <span>受験料をサポート</span>
+        </a>
+        <a class="tile" href="board.html">
+          <span class="icon">💬</span>
+          <strong>雑談掲示板</strong>
+          <span>ママ・資格・転職の話題</span>
+        </a>
+        <a class="tile" href="stories.html">
+          <span class="icon">🌱</span>
+          <strong>先輩と各期の学び</strong>
+          <span>モデルケース・資料</span>
+        </a>
+        <a class="tile" href="events.html">
+          <span class="icon">☕</span>
+          <strong>交流会・サークル</strong>
+          <span>雑談会・講師になる</span>
+        </a>
+      </nav>
     </section>
 
-    <section id="join">
-      <div class="wrap">
-        <h2>参加方法</h2>
-        <ol class="steps">
-          <li>下のボタンからLINEオープンチャットを開きます</li>
-          <li>ニックネームを設定して参加します</li>
-          <li>ひとこと自己紹介をどうぞ</li>
-        </ol>
-        <div class="cta">
-          <!-- TODO: href を実際のLINEオープンチャットURLに差し替えてください -->
-          <a class="btn" href="#">LINEオープンチャットに参加</a>
+    <section>
+      <h2>ゆるいルール</h2>
+      <ul class="rules">
+        <li><b>👀</b>見るだけでもOK。発言は自由です</li>
+        <li><b>✅</b>既読スルーOK。スタンプだけの返信もOK</li>
+        <li><b>🕰️</b>忙しい時期はお休みして、また戻ってきてください</li>
+        <li><b>🤝</b>自分のタイミングで、自分のペースで学べます</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>お知らせ</h2>
+      <div class="card stack">
+        <div>
+          <span class="tag orange">交流会</span>
+          <p>修了生ランチ交流会を開催します（日程は仮）</p>
+          <p class="muted"><a href="events.html">交流会・サークルを見る →</a></p>
+        </div>
+        <div>
+          <span class="tag green">学び</span>
+          <p>今月のおすすめ資格情報を更新しました</p>
+          <p class="muted"><a href="points.html">資格サポートを見る →</a></p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">&copy; 2026 line-womenseye</div>
+  <footer class="site-footer">
+    <div class="wrap">企画・運営：NPO法人ウィメンズアイ（サンプル）</div>
   </footer>
 </body>
 </html>
